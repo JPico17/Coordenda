@@ -32,7 +32,14 @@ public class TestCoordenda
         {
             System.out.println("Coordenada diferente");
         }
-
-        //System.out.println("Las distancia total entre la coordenada: " + c1 + " y la coordenda " + c2 + " es: ");
+        
+        Coordenada otra = new Coordenada();
+        otra.setX(2);
+        otra.setY(10);
+        System.out.println("Las Coordendas son : \n");
+        System.out.println("X = " + otra.getX());
+        System.out.println("Y = " + otra.getY());
+        System.out.println(otra);
+        System.out.println("Las distancia total entre la coordenada: " + otra + " es : " + otra.getDistancia() );
     }
 }

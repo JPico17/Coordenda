@@ -1,9 +1,8 @@
 public class Coordenada 
 {
-    public static final String distanciaTotal = null;
-    public static String calcularDistancia;
 	private double x;
     private double y;
+    private double distancia;
 
     public Coordenada()
     {
@@ -40,17 +39,22 @@ public class Coordenada
         return "( " + x + "," + y + " )";
     }
 
-    public boolean equals(Object o)
+    public boolean equals(Object r)
     {
-        Coordenada otra = (Coordenada)o;
+        Coordenada otra = (Coordenada)r;
         return (this.x == otra.x) && (this.y == otra.y);    
     }
-    public double calcularDistancia()
+
+    public double getDistancia()
     {
-        double xr = x-x;
-        double yr = y-y;
-        int distanciaTotal;
-        return distanciaTotal = (int) Math.sqrt(x*x + y*y);
+        return distancia;
+    }
+    public void calcularDistancia(Object r)
+    {
+        Coordenada otra = (Coordenada)r;
+        distancia =  Math.sqrt(Math.pow((x - otra.x),2) + Math.pow((y - otra.y),2));
     } 
+    
+    
     
 }
